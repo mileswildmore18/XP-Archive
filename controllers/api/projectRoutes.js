@@ -1,4 +1,4 @@
-let APIKey = "bde9a5a84a684b019b42aab0edf6645c";
+let APIKey = process.env.DB_APIKEY;
 const reqURL = `https://api.rawg.io/api/games?key=${APIKey}`;
 const router = require('express').Router();
 const { Games } = require('../../models');

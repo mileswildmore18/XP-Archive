@@ -5,7 +5,11 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
+
     const gameData = await Games.findAll({
+
+    const projectData = await Games.findAll({
+
       include: [
         {
           model: User,
@@ -29,7 +33,11 @@ router.get('/', async (req, res) => {
 
 router.get('/project/:id', async (req, res) => {
   try {
+
     const gameData = await Games.findByPk(req.params.id, {
+
+    const projectData = await Games.findByPk(req.params.id, {
+      
       include: [
         {
           model: User,
