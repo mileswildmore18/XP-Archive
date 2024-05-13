@@ -1,6 +1,23 @@
+let APIKey = "bde9a5a84a684b019b42aab0edf6645c";
+const reqURL = `https://api.rawg.io/api/games?key=${APIKey}`;
 const router = require('express').Router();
 const { Project } = require('../../models');
 const withAuth = require('../../utils/auth');
+
+// Get RAWG API Game data -Emanuel
+function getAPI () {
+  fetch(reqURL).then(function (res){
+      console.log(res);
+      return res.json();
+  }).catch(function(err){
+      console.error(err);
+  })
+}
+//const btn = document.getElementById('games');
+
+//btn.addEventListener('click', getAPI);
+
+
 
 router.post('/', withAuth, async (req, res) => {
   try {
