@@ -8,8 +8,6 @@ router.get('/', async (req, res) => {
 
     const gameData = await Games.findAll({
 
-    const projectData = await Games.findAll({
-
       include: [
         {
           model: User,
@@ -35,8 +33,6 @@ router.get('/project/:id', async (req, res) => {
   try {
 
     const gameData = await Games.findByPk(req.params.id, {
-
-    const projectData = await Games.findByPk(req.params.id, {
       
       include: [
         {
