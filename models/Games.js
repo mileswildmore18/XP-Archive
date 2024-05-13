@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Games extends Model {}
 
-Project.init(
+Games.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,12 +18,12 @@ Project.init(
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
+    date_released: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
+    rating_count: {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
@@ -44,4 +44,4 @@ Project.init(
   }
 );
 
-module.exports = Project;
+module.exports = Games;
