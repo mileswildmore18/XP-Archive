@@ -1,7 +1,7 @@
 let APIKey = "bde9a5a84a684b019b42aab0edf6645c";
 const reqURL = `https://api.rawg.io/api/games?key=${APIKey}`;
 const router = require('express').Router();
-const { Project } = require('../../models');
+const { Games } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Get RAWG API Game data -Emanuel
@@ -21,7 +21,7 @@ function getAPI () {
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newProject = await Project.create({
+    const newProject = await Games.create({
       ...req.body,
       user_id: req.session.user_id,
     });
@@ -34,7 +34,7 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.destroy({
+    const projectData = await Games.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
