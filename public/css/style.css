@@ -8,7 +8,15 @@ a {
 }
 .game {
   display: flex;
+  margin: 45px;
+
   
+}
+
+#bars {
+  display:flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 h2 {
