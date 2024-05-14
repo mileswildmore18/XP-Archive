@@ -23,8 +23,13 @@ h2 {
   color: red;
 }
 
+h3 {
+  color: rgb(248, 207, 129);
+}
+
 h4 {
   color: orange;
+  text-align: center;
 }
 
 label{
@@ -32,9 +37,6 @@ label{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.game :hover {
-  background-color: rgb(252, 197, 197)
-}
 
 p {
   color: whitesmoke;
@@ -48,10 +50,16 @@ div {
 nav :hover {
   background-color: rgb(255, 206, 206);
   color: black;
-
-
-
 }
+
+#logout {
+  color: red;
+  border: none;
+  font-weight: bold;
+}
+
+
+
 .form-group {
   display:flex;
   flex-direction: column;
@@ -61,6 +69,7 @@ nav :hover {
 .bottom {
   display:flex;
   justify-content: center;
+  align-items: center;
 }
 
 header, .project:not(:last-child) {
