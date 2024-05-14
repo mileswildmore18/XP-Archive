@@ -1,5 +1,4 @@
-let APIKey = 'bde9a5a84a684b019b42aab0edf6645c';
-const reqURL = `https://api.rawg.io/api/games?key=${APIKey}`;
+const reqURL = `https://api.rawg.io/api/games?key=${process.env.DB_APIKEY}`;
 const router = require('express').Router();
 const { Games } = require('../../models');
 const withAuth = require('../../utils/auth');
@@ -20,7 +19,7 @@ function loadGames(url){
   loaderEl.classList.remove("loaded");
   
   // Fetch recently released games from RAWG API
-  fetch(url)
+  fetch(reqURL)
       .then(response => response.json())
       .then(data => {
           nextGameListUrl = data.next ? data.next : null;
