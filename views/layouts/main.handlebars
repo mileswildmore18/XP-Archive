@@ -12,22 +12,18 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        
-       
-       
-      </h1>
-      <nav class ="navigate">
-        <h1>
-        <a class="game" href="/">Home!</a>
-        <a class="game" href="/project">Game Dashboard</a>
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a class="game" href="/login">Login</a>
-        {{/if}}
+ 
+      <nav class="navigate">
+        <h1 id="bars">
+          <a class="game" href="/">Home</a>
+          <a class="game" href="/project">Game Dashboard</a>
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="/profile">profile</a> |
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <a class="game" href="/login">Login</a>
+          {{/if}}
         </h1>
       </nav>
     </header>
@@ -36,7 +32,7 @@
       {{{ body }}}
     </main>
     <footer>
-      
+
     </footer>
   </div>
 
