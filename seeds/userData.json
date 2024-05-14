@@ -1,17 +1,247 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "password123"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "password": "password123"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "name": "Robert Brown",
+    "email": "robert.brown@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Emily Davis",
+    "email": "emily.davis@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Michael Wilson",
+    "email": "michael.wilson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jessica Martinez",
+    "email": "jessica.martinez@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Daniel Taylor",
+    "email": "daniel.taylor@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Ashley Anderson",
+    "email": "ashley.anderson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "James Thomas",
+    "email": "james.thomas@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Sarah Jackson",
+    "email": "sarah.jackson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "David White",
+    "email": "david.white@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Sophia Harris",
+    "email": "sophia.harris@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Christopher Martin",
+    "email": "christopher.martin@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Olivia Thompson",
+    "email": "olivia.thompson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Andrew Garcia",
+    "email": "andrew.garcia@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Isabella Martinez",
+    "email": "isabella.martinez@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Joshua Robinson",
+    "email": "joshua.robinson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Ava Clark",
+    "email": "ava.clark@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Ryan Rodriguez",
+    "email": "ryan.rodriguez@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Mia Lewis",
+    "email": "mia.lewis@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Brandon Lee",
+    "email": "brandon.lee@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Abigail Walker",
+    "email": "abigail.walker@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jonathan Hall",
+    "email": "jonathan.hall@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Madison Allen",
+    "email": "madison.allen@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Christian Young",
+    "email": "christian.young@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Chloe King",
+    "email": "chloe.king@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Benjamin Wright",
+    "email": "benjamin.wright@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Ella Scott",
+    "email": "ella.scott@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Samuel Green",
+    "email": "samuel.green@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Lily Adams",
+    "email": "lily.adams@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jackson Baker",
+    "email": "jackson.baker@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Sofia Nelson",
+    "email": "sofia.nelson@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Alexander Carter",
+    "email": "alexander.carter@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Grace Mitchell",
+    "email": "grace.mitchell@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Lucas Perez",
+    "email": "lucas.perez@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Victoria Roberts",
+    "email": "victoria.roberts@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Mason Turner",
+    "email": "mason.turner@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Aubrey Phillips",
+    "email": "aubrey.phillips@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Ethan Campbell",
+    "email": "ethan.campbell@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Avery Parker",
+    "email": "avery.parker@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Caleb Evans",
+    "email": "caleb.evans@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Natalie Edwards",
+    "email": "natalie.edwards@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jacob Collins",
+    "email": "jacob.collins@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Hannah Stewart",
+    "email": "hannah.stewart@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Matthew Sanchez",
+    "email": "matthew.sanchez@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Layla Morris",
+    "email": "layla.morris@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Logan Rogers",
+    "email": "logan.rogers@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Samantha Reed",
+    "email": "samantha.reed@example.com",
+    "password": "password123"
+  },
+  {
+    "name": "Jack Cook",
+    "email": "jack.cook@example.com",
+    "password": "password123"
   }
 ]

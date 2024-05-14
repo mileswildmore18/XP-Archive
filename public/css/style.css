@@ -1,3 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav :hover {
+  background-color: red;
+  color: black;
+}
+.form-group {
+  display:flex;
+  flex-direction: column;
+  
+}
+
+
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
@@ -22,3 +38,4 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
