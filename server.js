@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
 const path = require('path');
@@ -6,6 +7,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store)//setups the beginning session of the token
 const helpers = require('./utils/helpers') // login logout
+
 // imports sequelize connection
 
 const app = express();
@@ -36,10 +38,13 @@ app.use(express.static(path.join(__dirname,'public'))) //java css will be direct
 
 app.use(routes);
 
+
 // syncs sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => {
       console.log(`App listening on port http://localhost:${PORT} !`);
     });
   });
+
+
   
