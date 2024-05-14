@@ -1,16 +1,26 @@
 <!-- Loop over each object in the projects array -->
+<h4>Welcome to XP Archive! <br />
+  Gain Experience points with every game you play, and review them after you complete the game! <br />
+  Sign up today to join the community of checking out games based on your favourite genre and gain lvls experiencing new
+  games out now or games you have not played!</h4>
 {{#each games as |game| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
+
       <!-- Call helper function with triple brackets to render the game span as HTML -->
       {{{get_game}}}
+
+      {{#if logged_in}}
       <a href="/project/{{game.id}}">{{game.name}}</a>
+      {{else}}
+      <a href="/login/">{{game.name}}</a>
+      {{/if}}
     </h2>
     <p>
       <span for="img" aria-label="money">&#128187;</span>
       <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount"></span>
+      <span class="wishlist"></span>
       Add to wishlist!
     </p>
     <p>Created by {{game.name}} on {{format_date game.date_released}}</p>

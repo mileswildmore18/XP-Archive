@@ -12,18 +12,18 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
- 
+
       <nav class="navigate">
         <h1 id="bars">
           <a class="game" href="/">Home</a>
           <a class="game" href="/project">Game Dashboard</a>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
-          <a href="/profile">profile</a> |
-          <button class="no-button" id="logout">logout</button>
-          {{else}}
-          <a class="game" href="/login">Login</a>
-          {{/if}}
+          <a class="game" href="/profile">Profile</a>
+          <a class="game" id="logout">Logout</button>
+            {{else}}
+            <a class="game" href="/login">Login</a>
+            {{/if}}
         </h1>
       </nav>
     </header>
@@ -31,8 +31,10 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-
+    <footer class="bottom">
+      <h4> Let's get GAMING! <br />
+        Wild Coders </br />
+        Copyright© 2024
     </footer>
   </div>
 
