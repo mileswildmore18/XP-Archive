@@ -1,3 +1,23 @@
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav :hover {
+  background-color: red;
+  color: black;
+}
+.form-group {
+  display:flex;
+  flex-direction: column;
+  
+}
+
+
+header, .project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+
 /* 
 ---------------------------------------------
 font & reset css
@@ -271,6 +291,7 @@ Pre-loader Style
   height: 40px;
   background: transparent;
 }
+
 
 .preloader-inner .dot {
   position: absolute;
