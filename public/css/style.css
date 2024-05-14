@@ -23,6 +23,10 @@ h2 {
   color: red;
 }
 
+h4 {
+  color: orange;
+}
+
 label{
   color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
@@ -54,6 +58,10 @@ nav :hover {
   
 }
 
+.bottom {
+  display:flex;
+  justify-content: center;
+}
 
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
