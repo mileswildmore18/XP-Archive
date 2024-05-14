@@ -14,16 +14,21 @@
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
         
-        <a href="/">Sign Me Up!</a>
+       
+       
       </h1>
-      <nav>
+      <nav class ="navigate">
+        <h1>
+        <a class="game" href="/">Home!</a>
+        <a class="game" href="/project">Game Dashboard</a>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a class="game" href="/login">Login</a>
         {{/if}}
+        </h1>
       </nav>
     </header>
     <main class="container container-fluid mt-5">

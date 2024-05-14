@@ -1,12 +1,44 @@
+a {
+  color: red;
+}
 
-nav {
+.navigate {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+}
+.game {
+  display: flex;
+  
+}
+
+h2 {
+  color: red;
+}
+
+label{
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game :hover {
+  background-color: rgb(252, 197, 197)
+}
+
+p {
+  color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  background-color: rgb(65, 64, 64);
 }
 
 nav :hover {
-  background-color: red;
+  background-color: rgb(255, 206, 206);
   color: black;
+
+
+
 }
 .form-group {
   display:flex;
@@ -17,4 +49,7 @@ nav :hover {
 
 header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
