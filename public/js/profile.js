@@ -1,4 +1,4 @@
-let APIKey = 'bde9a5a84a684b019b42aab0edf6645c'
+let APIKey = '0642c91bda6e431e9d5797ba620a8e55'
 const gameList = document.querySelector(".gameList");
 const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
@@ -47,14 +47,14 @@ function displayResults(games) {
 const gameListener = async function (event) {
   if (event.target.matches(".wishButton")) {
     const name = event.target.dataset.gamename;
-    const gameImg = event.target.dataset.gameimg;
+    const background_image = event.target.dataset.gameimg;
     const rating_count = event.target.dataset.gamerating;
     const date_released = event.target.dataset.gamereleased;
-    console.log(name, rating_count, gameImg, date_released)
+    console.log(name, rating_count, background_image, date_released)
 
     const response = await fetch(`/api/games`, {
       method: 'POST',
-      body: JSON.stringify({ name, date_released, rating_count }),
+      body: JSON.stringify({ name, date_released, rating_count, background_image}),
       headers: {
         'Content-Type': 'application/json',
       },
