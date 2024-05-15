@@ -1,7 +1,9 @@
 # The-Wild-Coders
 
 ## Description
+Welcome to the XP Archive! Where you can choose your favourite
 
+## Link
 
 
 
@@ -62,12 +64,12 @@ node server.js
 ```
 
 If you want to leave the E-Commerce back end, hold "CTRL+C" ("CMD+C" for Mac) to stop hosting localhost 3001.
-Resources
+## Resources
 
 Link to npm page : https://www.npmjs.com/
 
 Link to get node.js: https://nodejs.org/
-Questions
+## Questions
 
 If you would like contact me for further information, be sure to reach out to me at mileswildmore@hotmail.com
 
