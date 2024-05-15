@@ -1,14 +1,15 @@
 <div class="text-center">
   <h2>{{name}}</h2>
-  <p>{{{get_emoji}}}</p>
+  <p>{{{get_game}}}</p>
   <p>{{description}}</p>
   <p>Created by {{user.name}} on {{format_date date_created}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    <span class="dollar-amount">{{format_amount rating_count}}</span>
     needed
   </p>
   <p>
-    <button class="btn btn-primary">Fund this Project!</button>
+    <button class="btn btn-primary">Add game</button>
   </p>
 </div>
+<script src="./js/projectRoute.js"></script>
