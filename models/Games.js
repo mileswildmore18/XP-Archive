@@ -9,8 +9,9 @@ Games.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    background_image: {
       type: DataTypes.STRING,
+      allowNull: true,
     },
     date_released: {
       type: DataTypes.DATE,
@@ -28,6 +29,11 @@ Games.init(
         key: 'id',
       },
     },
+    status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    }
   },
   {
     sequelize,
