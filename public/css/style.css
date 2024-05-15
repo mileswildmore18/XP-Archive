@@ -6,15 +6,16 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .game {
   display: flex;
   margin: 45px;
+  flex-direction: column;
 
-  
 }
 
 #bars {
-  display:flex;
+  display: flex;
   flex-direction: row;
   width: 100%;
 }
@@ -32,7 +33,7 @@ h4 {
   text-align: center;
 }
 
-label{
+label {
   color: whitesmoke;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -58,23 +59,56 @@ nav :hover {
   font-weight: bold;
 }
 
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  appearance: button;
+  margin-bottom: -25px;
+  margin-right: 270px;
+  margin-top: 30px;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] :hover {
+  background-color: rgb(241, 197, 1);
+}
 
 
 .form-group {
-  display:flex;
+  display: flex;
   flex-direction: column;
-  
+
 }
 
 .bottom {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+input,
+select,
+textarea,
+button {
+  margin: 30px;
+  font-family: inherit;
+  font-size: 119%;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.3rem;
+  margin: 0 0 1rem;
+  line-height: 1.5;
 }
