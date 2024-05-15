@@ -1,7 +1,7 @@
 # The-Wild-Coders
 
 ## Description
-Welcome to the XP Archive! Where you can choose your favourite
+Welcome to the XP Archive! Where you can choose games based on your favourite genre and pck out games you want to try! You will be able to get a chance to gain experience points and levels with every game you play. Whatever game you choose will be recorded into the database and you can add it to your collection of games! You can write a review right after you completed the game and let us know how you liked the experience! We learned how to apply the API Key to link to the website we added it fom where it will show all the information you from a game you are looking for! This database will allow you o archive any of the games you played and reviewed, as well as providing the library games you have received! Enjoy the world of gaming!
 
 ## Link
 
@@ -64,11 +64,15 @@ node server.js
 ```
 
 If you want to leave the E-Commerce back end, hold "CTRL+C" ("CMD+C" for Mac) to stop hosting localhost 3001.
+
 ## Resources
+
+Link to the website of the API: 
 
 Link to npm page : https://www.npmjs.com/
 
 Link to get node.js: https://nodejs.org/
+
 ## Questions
 
 If you would like contact me for further information, be sure to reach out to me at mileswildmore@hotmail.com
