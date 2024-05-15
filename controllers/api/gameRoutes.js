@@ -1,16 +1,20 @@
 const router = require('express').Router();
 const withAuth = require("../../utils/auth")
 require('dotenv').config();
-console.log(process.env.DB_APIKEY)
+const { Games } = require('../../models');
 
-router.get('/:name', withAuth, async (req,res)=> {
-    try{
-        const newGame = await axios.get(`https://api.rawg.io/api/games?key=${process.env.DB_APIKEY}&${req.params.name}`)
-        console.log(newGame)
-        // res.render('profile', newGame, userData, loggedIn)
-    } catch (err){
-        res.status(400).json(err)
+router.post('/', withAuth, async (req, res) => {
+    try {
+        console.log('creating game', req.body)
+      const newGame = await Games.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
+  
+      res.status(200).json(newGame);
+    } catch (err) {
+      res.status(400).json(err);
     }
-})
+  });
 
 module.exports = router;

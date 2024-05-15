@@ -5,6 +5,8 @@ const loadMoreGamesBtn = document.querySelector(".main-button")
 let nextGameListUrl = null;
 const url = `https://api.rawg.io/api/games?key=${APIKey}`
 
+const resultsContainer = document.getElementById('results');
+
 async function fetchGamesByName(query) {
   const response = await fetch(`https://api.rawg.io/api/games?key=${APIKey}&search=${query}`);
   const data = await response.json();
@@ -24,7 +26,6 @@ document.getElementById('searchBar').addEventListener('input', async (event) => 
 });
 
 function displayResults(games) {
-  const resultsContainer = document.getElementById('results');
   resultsContainer.innerHTML = '';
 
   games.forEach(game => {
@@ -36,15 +37,39 @@ function displayResults(games) {
       <p>Released: ${game.released}</p>
       <p>Rating: ${game.rating}</p>
       <p>ID: ${game.id}</p>
-      <button id="${game.name}" type="button"> Add to Wishlist </button>
-      <button id="${game.name}" type="button"> Add to My Games </button>
+      <button data-gamename="${game.name}" data-gameimg="${game.background_image}" data-gamerating="${game.rating}" data-gamereleased="${game.released}" type="button" class="wishButton"> Add to Wishlist </button>
+      <button id="${game.name}" type="button" class="collection"> Add to My Games </button>
     `;
     resultsContainer.appendChild(gameElement);
   });
 }
 
+const gameListener = async function (event) {
+  if (event.target.matches(".wishButton")) {
+    const name = event.target.dataset.gamename;
+    const gameImg = event.target.dataset.gameimg;
+    const rating_count = event.target.dataset.gamerating;
+    const date_released = event.target.dataset.gamereleased;
+    console.log(name, rating_count, gameImg, date_released)
 
+    const response = await fetch(`/api/games`, {
+      method: 'POST',
+      body: JSON.stringify({ name, date_released, rating_count }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+    if (response.ok) {
+      // document.location.replace('/login');
+      console.log('success fetch')
+    } else {
+      alert('Failed to create project');
+    }
+  }
+}
 
+resultsContainer.addEventListener('click', gameListener);
+const gameButton = document.getElementById('wishButton');
 
 
 
