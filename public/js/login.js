@@ -36,8 +36,8 @@ function displayResults(games) {
       <p>Released: ${game.released}</p>
       <p>Rating: ${game.rating}</p>
       <p>ID: ${game.id}</p>
-      <button id="${game.name}" type="button"> Add to Wishlist </button>
-      <button id="${game.name}" type="button"> Add to My Games </button>
+      <button id="${game.name}" type="button"> + Add to Wishlist </button>
+      <button id="${game.name}" type="button"> + Add to My Games </button>
     `;
     resultsContainer.appendChild(gameElement);
   });
