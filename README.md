@@ -1,5 +1,7 @@
 # The-Wild-Coders
 
+![alt text](</public/Assets/XP Archive Screenshot.png>)
+
 ## Description
 Welcome to the XP Archive! Where you can choose games based on your favourite genre and pck out games you want to try! You will be able to get a chance to gain experience points and levels with every game you play. Whatever game you choose will be recorded into the database and you can add it to your collection of games! You can write a review right after you completed the game and let us know how you liked the experience! We learned how to apply the API Key to link to the website we added it from where it will show all the information you from a game you are looking for! This database will allow you to archive any of the games you played and reviewed, as well as providing the library games you have received! Also learned how to update the collection of games that a user has as well as deleting the games. Enjoy the world of gaming! 
 
