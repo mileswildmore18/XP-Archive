@@ -30,15 +30,17 @@ function displayResults(games) {
 
   games.forEach(game => {
     const gameElement = document.createElement('div');
-    gameElement.classList.add('game');
+    gameElement.classList.add('game', 'card');
     gameElement.innerHTML = `
-      <h2>${game.name}</h2>
+      <h2 class="card-header">${game.name}</h2>
+      <div class="card-body">
       <img src="${game.background_image}" alt="${game.name}" width="200px">
       <p>Released: ${game.released}</p>
       <p>Rating: ${game.rating}</p>
       <p>ID: ${game.id}</p>
       <button data-gamename="${game.name}" data-gameimg="${game.background_image}" data-gamerating="${game.rating}" data-gamereleased="${game.released}" type="button" class="wishButton"> Add to Wishlist </button>
       <button id="${game.name}" type="button" class="collection"> Add to My Games </button>
+      </div>
     `;
     resultsContainer.appendChild(gameElement);
   });
