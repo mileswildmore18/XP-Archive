@@ -56,10 +56,7 @@ div {
   background-color: rgb(65, 64, 64);
 }
 
-nav :hover {
-  background-color: rgb(255, 206, 206);
-  color: black;
-}
+
 
 #logout {
   color: red;
