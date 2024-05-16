@@ -4,51 +4,56 @@
   </div>
 </div>
 
-    <h3>Add a game to Wishlist or Collection:</h3>
-    
-      <div class="form-group">
-      <input type="text" id="searchBar" placeholder="Search for games by name...">
-          <div id="results"></div>
+<h3>Add a game to Wishlist or Collection:</h3>
+
+<div class="form-group">
+  <input type="text" id="searchBar" placeholder="Search for games by name...">
+  <div id="results"></div>
+</div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    {{#each games as |game| }}
+    <div class="row mb-4 project">
+      <div class="col-md-5">
+        <h2>
+
+          <!-- Call helper function with triple brackets to render the game span as HTML -->
+          {{{get_game}}}
+
+          {{#if logged_in}}
+          <a href="/project/{{game.id}}">{{game.name}}</a>
+          {{else}}
+          <a href="/login/">{{game.name}}</a>
+          {{/if}}
+        </h2>
+
+
+
+
+        <p>
+          <span for="img" aria-label="money">&#128187;</span>
+          <!-- Pass needed_funding value to the helper function -->
+          <span class="wishlist"></span>
+          Add to wishlist!
+        </p>
+        <p>Released on {{format_date game.date_released}}</p>
+      </div>
+      <div class="col-md-7">
+        <p>
+          {{game.description}}
+        </p>
       </div>
     </div>
-
-<div class="row mt-4 ">
-  <div class="col-md-4 ">
-    {{#each games as |game| }}
-<div class="row md-12 card">
-  <div class="card-info">
-    <h2 class="card-header">
-
-      <!-- Call helper function with triple brackets to render the game span as HTML -->
-      {{!-- {{{get_game}}} --}}
-
-      {{#if logged_in}}
-      <div class="card-header">{{game.name}}</div>
-      {{else}}
-      <div class="card-header">{{game.name}}</div>
-      {{/if}}
-    </h2>
-
-
-
-
-    <p>
-      <span for="img" aria-label="money">&#128187;</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="wishlist"></span>
-      Add to wishlist!
-    </p>
-    <p>Released on {{format_date game.date_released}}</p>
-    <div class="remove" data-id="{{game.id}}">Remove</div>
+    {{/each}}
   </div>
-
 </div>
-{{/each}}
 
 
 
 
 
-  
+
 
 <script src="./js/profile.js"></script>
