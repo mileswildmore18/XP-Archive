@@ -2,6 +2,7 @@ let APIKey = '0642c91bda6e431e9d5797ba620a8e55'
 const gameList = document.querySelector(".gameList");
 const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
+const wishButton = document.getElementById('wishButton');
 let nextGameListUrl = null;
 const url = `https://api.rawg.io/api/games?key=${APIKey}`
 
@@ -38,8 +39,8 @@ function displayResults(games) {
       <p>Released: ${game.released}</p>
       <p>Rating: ${game.rating}</p>
       <p>ID: ${game.id}</p>
-      <button data-gamename="${game.name}" data-gameimg="${game.background_image}" data-gamerating="${game.rating}" data-gamereleased="${game.released}" type="button" class="wishButton"> Add to Wishlist </button>
-      <button id="${game.name}" type="button" class="collection"> Add to My Games </button>
+      <button data-gamename="${game.name}" data-gameimg="${game.background_image}" data-gamerating="${game.rating}" data-gamereleased="${game.released}" data-boolean="false" type="button" class="addGame"> Add to Wishlist </button>
+      <button data-gamename="${game.name}" data-gameimg="${game.background_image}" data-gamerating="${game.rating}" data-gamereleased="${game.released}" data-boolean="true" type="button" class="addGame"> Add to Collection </button>
       </div>
     `;
     resultsContainer.appendChild(gameElement);
@@ -47,16 +48,17 @@ function displayResults(games) {
 }
 
 const gameListener = async function (event) {
-  if (event.target.matches(".wishButton")) {
+  if (event.target.matches(".addGame")) {
     const name = event.target.dataset.gamename;
     const background_image = event.target.dataset.gameimg;
     const rating_count = event.target.dataset.gamerating;
     const date_released = event.target.dataset.gamereleased;
-    console.log(name, rating_count, background_image, date_released)
+    const status = event.target.dataset.boolean;
+    console.log(name, rating_count, background_image, date_released, status)
 
     const response = await fetch(`/api/games`, {
       method: 'POST',
-      body: JSON.stringify({ name, date_released, rating_count, background_image}),
+      body: JSON.stringify({ name, background_image, date_released, rating_count, status}),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -71,7 +73,7 @@ const gameListener = async function (event) {
 }
 
 resultsContainer.addEventListener('click', gameListener);
-const gameButton = document.getElementById('wishButton');
+
 
 
 const newFormHandler = async (event) => {
