@@ -65,7 +65,7 @@ const gameListener = async function (event) {
       },
     });
     if (response.ok) {
-      // document.location.replace('/login');
+      document.location.replace('/profile');
       console.log('success fetch')
     } else {
       alert('Failed to create project');
