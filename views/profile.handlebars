@@ -12,20 +12,20 @@
       </div>
     </div>
 
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="row mt-4 ">
+  <div class="col-md-4 ">
     {{#each games as |game| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
+<div class="row md-12 card">
+  <div class="card-info">
+    <h2 class="card-header">
 
       <!-- Call helper function with triple brackets to render the game span as HTML -->
-      {{{get_game}}}
+      {{!-- {{{get_game}}} --}}
 
       {{#if logged_in}}
-      <a href="/project/{{game.id}}">{{game.name}}</a>
+      <div class="card-header">{{game.name}}</div>
       {{else}}
-      <a href="/login/">{{game.name}}</a>
+      <div class="card-header">{{game.name}}</div>
       {{/if}}
     </h2>
 
@@ -39,12 +39,9 @@
       Add to wishlist!
     </p>
     <p>Released on {{format_date game.date_released}}</p>
+    <div class="remove" data-id="{{game.id}}">Remove</div>
   </div>
-  <div class="col-md-7">
-    <p>
-      {{game.description}}
-    </p>
-  </div>
+
 </div>
 {{/each}}
 

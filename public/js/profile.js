@@ -31,7 +31,7 @@ function displayResults(games) {
 
   games.forEach(game => {
     const gameElement = document.createElement('div');
-    gameElement.classList.add('game', 'card');
+    gameElement.classList.add('game','card');
     gameElement.innerHTML = `
       <h2 class="card-header">${game.name}</h2>
       <div class="card-body">
