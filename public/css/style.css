@@ -17,6 +17,7 @@ a {
 #bars {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
 }
 
@@ -26,6 +27,7 @@ h2 {
 
 h3 {
   color: rgb(248, 207, 129);
+  text-align: center;
 }
 
 h4 {
@@ -111,4 +113,10 @@ p {
   font-size: 1.3rem;
   margin: 0 0 1rem;
   line-height: 1.5;
+}
+
+.gaming {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

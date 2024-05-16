@@ -2,6 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const routes = require('./controllers');
 const sequelize = require('./config/connection');
+const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
@@ -29,6 +30,7 @@ const sess = {
   }),
 }
 //middleware for the server
+app.use(morgan('combined'))
 app.use(session(sess))
 app.engine('handlebars', hbs.engine)
 app.set('view engine', 'handlebars')
@@ -38,6 +40,9 @@ app.use(express.static(path.join(__dirname,'public'))) //java css will be direct
 
 app.use(routes);
 
+app.get('/', function (req, res) {
+  res.send('Welcome to XP Archive!')
+})
 
 // syncs sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
