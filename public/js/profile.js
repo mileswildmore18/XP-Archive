@@ -7,6 +7,7 @@ let nextGameListUrl = null;
 const url = `https://api.rawg.io/api/games?key=${APIKey}`
 
 const resultsContainer = document.getElementById('results');
+const collectionContainer = document.getElementById('collection');
 
 async function fetchGamesByName(query) {
   const response = await fetch(`https://api.rawg.io/api/games?key=${APIKey}&search=${query}`);
@@ -31,7 +32,7 @@ function displayResults(games) {
 
   games.forEach(game => {
     const gameElement = document.createElement('div');
-    gameElement.classList.add('game','card');
+    gameElement.classList.add('game', 'card');
     gameElement.innerHTML = `
       <h2 class="card-header">${game.name}</h2>
       <div class="card-body">
@@ -58,7 +59,7 @@ const gameListener = async function (event) {
 
     const response = await fetch(`/api/games`, {
       method: 'POST',
-      body: JSON.stringify({ name, background_image, date_released, rating_count, status}),
+      body: JSON.stringify({ name, background_image, date_released, rating_count, status }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -74,26 +75,11 @@ const gameListener = async function (event) {
 
 resultsContainer.addEventListener('click', gameListener);
 
-
-
-const newFormHandler = async (event) => {
-  event.preventDefault();
-
-  const name = document.querySelector('#project-name').value.trim();
-
-  
-
-  if (name) {
-    const response = await fetch(`/api/gameRoutes`+name)
-};
-
-}
-
 const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
+  if (event.target.matches('.remove')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/games/${id}`, {
       method: 'DELETE',
     });
 
@@ -105,6 +91,4 @@ const delButtonHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.project-list')
-  .addEventListener('click', delButtonHandler);
+collectionContainer.addEventListener('click', delButtonHandler);
