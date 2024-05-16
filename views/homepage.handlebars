@@ -5,36 +5,5 @@
   games out now or games you have not played!</h4>
 
 <h3>Gain XP and unlock Perks! <br /> Enjoy the adventure! <br /> Rate the game after completion! <br /> Let's GAME!!!!</h3>
-{{#each games as |game| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
-    <h2>
 
-      <!-- Call helper function with triple brackets to render the game span as HTML -->
-      {{{get_game}}}
-
-      {{#if logged_in}}
-      <a href="/project/{{game.id}}">{{game.name}}</a>
-      {{else}}
-      <a href="/login/">{{game.name}}</a>
-      {{/if}}
-    </h2>
-
-
-
-
-    <p>
-      <span for="img" aria-label="money">&#128187;</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="wishlist"></span>
-      Add to wishlist!
-    </p>
-    <p>Created by {{game.name}} on {{format_date game.date_released}}</p>
-  </div>
-  <div class="col-md-7">
-    <p>
-      {{game.description}}
-    </p>
-  </div>
-</div>
-{{/each}}
+<h5><a href="/login">SIGN UP!</a> or <a href="/login">LOGIN!</a></h5>

@@ -9,15 +9,16 @@ a {
 
 .game {
   display: flex;
-  margin: 45px;
   flex-direction: column;
 
 }
 
+
+
 #bars {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -32,6 +33,11 @@ h3 {
 
 h4 {
   color: orange;
+  text-align: center;
+}
+
+h5 {
+  color: yellow;
   text-align: center;
 }
 
@@ -119,4 +125,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mt-4 {
+  margin-top: -0.625rem;
 }
