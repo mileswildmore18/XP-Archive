@@ -1,7 +1,5 @@
 const reqURL = `https://api.rawg.io/api/games?key=${process.env.DB_APIKEY}`;
-const router = require('express').Router();
-const { Games } = require('../../models');
-const withAuth = require('../../utils/auth');
+
 const gameList = document.querySelector(".gameList");
 const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
@@ -64,7 +62,7 @@ loadMoreGamesBtn.addEventListener("click", ()=>{
 
 
 
-module.exports = router;
+
 
 // router.post('/', withAuth, async (req, res) => {
 //   try {
