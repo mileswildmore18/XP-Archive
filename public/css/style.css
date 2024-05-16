@@ -157,3 +157,15 @@ p {
 .rating, .date {
   padding-left: 5px;
 }
+
+.content-container {
+display: flex;
+justify-content: space-between;
+}
+
+.side {
+  padding-left: 15px;
+}
+.card-container {
+  width: 100%;
+}

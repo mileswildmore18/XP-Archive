@@ -10,12 +10,17 @@
   <input type="text" id="searchBar" placeholder="Search for games by name...">
   <div id="results"></div>
 </div>
-</div>
 
-<div class="row mt-4" id="collection">
-  <div class="col-md-6">
+
+<div class="content-container">
+
+
+{{!-- Card for wishlist --}}
+ <div class="row mt-4" id="wishlist">
+<h2 class="side">Wishlist</h2>
+  <div class="col-md-12">
     {{#each games as |game| }}
-    <div class="row mb-4 project">
+    <div class="card-conatiner">
       <div class="card">
         <h2 class="card-header">
 
@@ -35,12 +40,36 @@
     </div>
     {{/each}}
   </div>
+ </div>
+
+{{!-- Card for Collection --}}
+ <div class="row mt-4" id="collection">
+<h2 class="side">My Games</h2>
+  <div class="col-md-12">
+    {{#each games as |game| }}
+    <div class="card-container">
+      <div class="card">
+        <h2 class="card-header">
+
+          <!-- Call helper function with triple brackets to render the game span as HTML -->
+          {{{get_game}}}
+
+          {{#if logged_in}}
+          <a href="/project/{{game.id}}">{{game.name}}</a>
+          {{else}}
+          <a href="/login/">{{game.name}}</a>
+          {{/if}}
+        </h2>
+        <p class="date">Released on {{format_date game.date_released}}</p>
+        <p class="rating">Rating {{game.rating_count}}</p>
+        <div class="remove" data-id="{{game.id}}">Remove</div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+ </div>
+
+
+
 </div>
-
-
-
-
-
-
-
 <script src="./js/profile.js"></script>
