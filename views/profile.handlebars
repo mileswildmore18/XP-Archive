@@ -16,8 +16,8 @@
   <div class="col-md-6">
     {{#each games as |game| }}
     <div class="row mb-4 project">
-      <div class="col-md-5">
-        <h2>
+      <div class="card">
+        <h2 class="card-header">
 
           <!-- Call helper function with triple brackets to render the game span as HTML -->
           {{{get_game}}}
@@ -39,11 +39,7 @@
           Add to wishlist!
         </p>
         <p>Released on {{format_date game.date_released}}</p>
-      </div>
-      <div class="col-md-7">
-        <p>
-          {{game.description}}
-        </p>
+        <div class="remove" data-id="{{game.id}}">Remove</div>
       </div>
     </div>
     {{/each}}
