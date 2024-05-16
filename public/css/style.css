@@ -130,3 +130,7 @@ p {
 .mt-4 {
   margin-top: -0.625rem;
 }
+.card-info {
+  width: 100%;
+
+}
