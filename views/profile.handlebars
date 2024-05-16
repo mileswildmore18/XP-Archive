@@ -28,17 +28,8 @@
           <a href="/login/">{{game.name}}</a>
           {{/if}}
         </h2>
-
-
-
-
-        <p>
-          <span for="img" aria-label="money">&#128187;</span>
-          <!-- Pass needed_funding value to the helper function -->
-          <span class="wishlist"></span>
-          Add to wishlist!
-        </p>
-        <p>Released on {{format_date game.date_released}}</p>
+        <p class="date">Released on {{format_date game.date_released}}</p>
+        <p class="rating">Rating {{game.rating_count}}</p>
         <div class="remove" data-id="{{game.id}}">Remove</div>
       </div>
     </div>
