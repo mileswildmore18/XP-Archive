@@ -5,6 +5,7 @@ a {
 .navigate {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .game {
@@ -92,6 +93,7 @@ button,
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(65, 64, 64);
 }
 
 header,
