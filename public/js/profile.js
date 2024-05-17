@@ -1,20 +1,36 @@
-let APIKey = '0642c91bda6e431e9d5797ba620a8e55'
 const gameList = document.querySelector(".gameList");
 const loaderEl = document.getElementById("js-preloader");
 const loadMoreGamesBtn = document.querySelector(".main-button")
 const wishButton = document.getElementById('wishButton');
 let nextGameListUrl = null;
-const url = `https://api.rawg.io/api/games?key=${APIKey}`
+
 
 const resultsContainer = document.getElementById('results');
 const collectionContainer = document.getElementById('content-container');
 
 async function fetchGamesByName(query) {
-  const response = await fetch(`https://api.rawg.io/api/games?key=${APIKey}&search=${query}`);
+  const key =  await fetchKey();
+  const secretKey = key.apiKey;
+  console.log(secretKey);
+  
+  const response = await fetch(`https://api.rawg.io/api/games?key=${secretKey}&search=${query}`);
   const data = await response.json();
   console.log(data);
   return data.results;
 }
+
+
+// This calls the API, just update the url to have your key's name.
+async function fetchKey() {
+  const url = 'https://yorkieportunus.herokuapp.com/store/My Archive'
+  const response = await fetch(url);
+  const key = await response.json();
+  return key;
+}
+// Call this wherever you need your key.
+
+
+
 
 document.getElementById('searchBar').addEventListener('input', async (event) => {
   const query = event.target.value.trim();
