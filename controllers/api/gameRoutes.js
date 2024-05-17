@@ -45,7 +45,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 router.put('/:id', withAuth, async (req,res) =>{
     try{
         const updatedGame = Games.update({
-            status: req.body
+            status: req.body.bool
         },
         {
             where: {
@@ -58,8 +58,9 @@ router.put('/:id', withAuth, async (req,res) =>{
             return;
         }
 
-        res.status(200).json(updatedData);
+        res.status(200).json(updatedGame);
     } catch (err) {
+        console.log(err)
         res.status(500).json(err);
     }
 })
