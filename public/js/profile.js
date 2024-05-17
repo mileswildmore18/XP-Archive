@@ -92,3 +92,22 @@ const delButtonHandler = async (event) => {
 };
 
 collectionContainer.addEventListener('click', delButtonHandler);
+
+async function fetchGamesByName(event){
+  if(event.target.matches('.status')){
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/games/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify('true'),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    if (response.ok) {
+      document.location.replace('/profile');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+}
