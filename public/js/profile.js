@@ -7,7 +7,7 @@ let nextGameListUrl = null;
 const url = `https://api.rawg.io/api/games?key=${APIKey}`
 
 const resultsContainer = document.getElementById('results');
-const collectionContainer = document.getElementById('collection');
+const collectionContainer = document.getElementById('content-container');
 
 async function fetchGamesByName(query) {
   const response = await fetch(`https://api.rawg.io/api/games?key=${APIKey}&search=${query}`);
@@ -76,7 +76,7 @@ const gameListener = async function (event) {
 resultsContainer.addEventListener('click', gameListener);
 
 const delButtonHandler = async (event) => {
-  if (event.target.matches('.remove')) {
+  if (event.target.matches('.remove') || event.target.matches('.delete') ) {
     const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/games/${id}`, {
@@ -93,21 +93,21 @@ const delButtonHandler = async (event) => {
 
 collectionContainer.addEventListener('click', delButtonHandler);
 
-async function fetchGamesByName(event){
-  if(event.target.matches('.status')){
-    const id = event.target.getAttribute('data-id');
+// async function fetchGamesByName(event){
+//   if(event.target.matches('.status')){
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/games/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify('true'),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-    if (response.ok) {
-      document.location.replace('/profile');
-    } else {
-      alert('Failed to delete project');
-    }
-  }
-}
+//     const response = await fetch(`/api/games/${id}`, {
+//       method: 'PUT',
+//       body: JSON.stringify('true'),
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//     })
+//     if (response.ok) {
+//       document.location.replace('/profile');
+//     } else {
+//       alert('Failed to delete project');
+//     }
+//   }
+// }
