@@ -68,7 +68,7 @@ const gameListener = async function (event) {
       document.location.replace('/profile');
       console.log('success fetch')
     } else {
-      alert('Failed to create project');
+      alert('Failed to create game');
     }
   }
 }
