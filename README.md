@@ -23,7 +23,7 @@ Welcome to the XP Archive! Where you can choose games based on your favourite ge
 
 ## Installation
 
-You will need these npm (Node Package Manager) along with the uuid in order to use the E-Commerce back end with these commands:
+You will need these npm (Node Package Manager) along with the uuid in order to use the database and sequelize end with these commands:
 ```
 npm install
 npm install bcrypt
@@ -35,7 +35,7 @@ npm install express-handlebars
 ```
 ## Usage
 
-You can use the "Node.js" terminal to check out the E-Commerce back end for information in the database.
+You can use the "Node.js" terminal to check out the back end for information in the database.
 
 ## Contributing
 
@@ -60,7 +60,7 @@ Then type in this command to leave the database:
 ```
 \q
 ```
-To test out the E-Commerce back end, to test the data and to see all the information featured in the database, navigate to the server js file, and use the follow commands in the terminal:
+To test out data and to see all the information featured in the database, navigate to the server js file, and use the follow commands in the terminal:
 ```
 npm run seed
 node server.js
