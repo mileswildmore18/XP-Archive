@@ -42,17 +42,17 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
-router.put('/:id', withAuth, async (req,res) =>{
-    try{
+router.put('/:id', withAuth, async (req, res) => {
+    try {
         const updatedGame = Games.update({
             status: req.body.bool
         },
-        {
-            where: {
-                id: req.params.id,
-                user_id: req.session.user_id,
-            },
-        });
+            {
+                where: {
+                    id: req.params.id,
+                    user_id: req.session.user_id,
+                },
+            });
         if (!updatedGame) {
             res.status(404).json({ message: 'No project found with this id!' });
             return;

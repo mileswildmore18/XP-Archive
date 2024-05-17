@@ -76,7 +76,7 @@ const gameListener = async function (event) {
 resultsContainer.addEventListener('click', gameListener);
 
 const buttonHandler = async (event) => {
-  if (event.target.matches('.remove') || event.target.matches('.delete') ) {
+  if (event.target.matches('.remove') || event.target.matches('.delete')) {
     const id = event.target.getAttribute('data-id');
 
     const response = await fetch(`/api/games/${id}`, {
@@ -88,13 +88,13 @@ const buttonHandler = async (event) => {
     } else {
       alert('Failed to delete game');
     }
-  } else if (event.target.matches('.addto')){
+  } else if (event.target.matches('.addto')) {
     const id = event.target.getAttribute('data-id');
     const bool = 'true'
 
     const response = await fetch(`/api/games/${id}`, {
       method: 'PUT',
-      body: JSON.stringify({bool}),
+      body: JSON.stringify({ bool }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -109,22 +109,3 @@ const buttonHandler = async (event) => {
 };
 
 collectionContainer.addEventListener('click', buttonHandler);
-
-// async function fetchGamesByName(event){
-//   if(event.target.matches('.addto')){
-//     const id = event.target.getAttribute('data-id');
-
-//     const response = await fetch(`/api/games/${id}`, {
-//       method: 'PUT',
-//       body: JSON.stringify('true'),
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//     })
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete project');
-//     }
-//   }
-// }
