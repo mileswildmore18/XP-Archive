@@ -20,12 +20,12 @@
 <h2 class="side">Wishlist</h2>
   <div class="col-md-12">
     {{#each games as |game| }}
+    {{#unless game.status}} 
     <div class="card-conatiner">
       <div class="card">
         <h2 class="card-header">
 
-          <!-- Call helper function with triple brackets to render the game span as HTML -->
-          {{{get_game}}}
+        
 
           {{#if logged_in}}
           <a href="/project/{{game.id}}">{{game.name}}</a>
@@ -35,9 +35,13 @@
         </h2>
         <p class="date">Released on {{format_date game.date_released}}</p>
         <p class="rating">Rating {{game.rating_count}}</p>
-        <div class="remove" data-id="{{game.id}}">Remove</div>
+        <section class="addremove"> 
+              <div class="addto" data-id="{{game.id}}">Add to Collection</div>
+              <div class="remove" data-id="{{game.id}}">Remove</div>
+        </section>
       </div>
     </div>
+    {{/unless}}
     {{/each}}
   </div>
  </div>
@@ -47,12 +51,12 @@
 <h2 class="side">My Games</h2>
   <div class="col-md-12">
     {{#each games as |game| }}
+    {{#if game.status}} 
     <div class="card-container">
       <div class="card">
         <h2 class="card-header">
 
-          <!-- Call helper function with triple brackets to render the game span as HTML -->
-          {{{get_game}}}
+    
 
           {{#if logged_in}}
           <a href="/project/{{game.id}}">{{game.name}}</a>
@@ -61,10 +65,11 @@
           {{/if}}
         </h2>
         <p class="date">Released on {{format_date game.date_released}}</p>
-        <p class="rating">Rating {{game.rating_count}}</p>
-        <div class="remove" data-id="{{game.id}}">Remove</div>
+        <p class="rating">Rating {{game.rating_count}}</p>   
+        <div class="delete" data-id="{{game.id}}">Remove</div>
       </div>
     </div>
+    {{/if}}
     {{/each}}
   </div>
  </div>
